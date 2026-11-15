@@ -1,0 +1,4 @@
+{"timestamp":"2026-11-15T10:00:00+00:00","event":"run_started","request":"List my open tasks","max_steps":6}
+{"timestamp":"2026-11-15T10:00:01+00:00","event":"tool_call","step":1,"tool":"list_tasks","arguments":{"status":"open"}}
+{"timestamp":"2026-11-15T10:00:01+00:00","event":"tool_result","step":1,"tool":"list_tasks","result":{"tasks":[]}}
+{"timestamp":"2026-11-15T10:00:02+00:00","event":"run_completed","step":2,"answer":"You have no open tasks saved yet."}
