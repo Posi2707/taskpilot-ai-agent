@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-task-planner"
+version = "1.0.0"
+description = "A tool-using task-planning agent with memory, traces, evaluations, and safety guardrails."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.6", "python-dotenv>=1.0", "openai>=1.30"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+task-agent = "agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
